@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mybatis on 莫奈子博客</title>
+    <link>https://lypzzz.github.io/tags/mybatis/</link>
+    <description>Recent content in mybatis on 莫奈子博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Sep 2021 10:02:00 +0000</lastBuildDate><atom:link href="https://lypzzz.github.io/tags/mybatis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>spring-boot集成Mybatis</title>
+      <link>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/</link>
+      <pubDate>Thu, 09 Sep 2021 17:22:00 +0000</pubDate>
+      
+      <guid>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/</guid>
+      <description>&lt;p&gt;官方文档 &lt;a href=&#34;http://mybatis.org/spring-boot-starter/&#34;&gt;http://mybatis.org/spring-boot-starter/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>spring-boot集成mybatis-plus</title>
+      <link>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis-plus/</link>
+      <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
+      
+      <guid>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis-plus/</guid>
+      <description>&lt;p&gt;官方文档&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mybatis.plus/guide/&#34;&gt;https://mybatis.plus/guide/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

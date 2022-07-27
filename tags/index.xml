@@ -5,6 +5,34 @@
     <link>https://lypzzz.github.io/tags/</link>
     <description>Recent content in Tags on 莫奈子博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://lypzzz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Sep 2021 10:02:00 +0000</lastBuildDate><atom:link href="https://lypzzz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mybatis</title>
+      <link>https://lypzzz.github.io/tags/mybatis/</link>
+      <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
+      
+      <guid>https://lypzzz.github.io/tags/mybatis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mybatis-plus</title>
+      <link>https://lypzzz.github.io/tags/mybatis-plus/</link>
+      <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
+      
+      <guid>https://lypzzz.github.io/tags/mybatis-plus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring-boot</title>
+      <link>https://lypzzz.github.io/tags/spring-boot/</link>
+      <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
+      
+      <guid>https://lypzzz.github.io/tags/spring-boot/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>莫奈子博客</title>
-    <link>https://lypzzz.github.io/</link>
-    <description>Recent content on 莫奈子博客</description>
+    <title>Springboots on 莫奈子博客</title>
+    <link>https://lypzzz.github.io/springboot/</link>
+    <description>Recent content in Springboots on 莫奈子博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Sep 2021 10:02:00 +0000</lastBuildDate><atom:link href="https://lypzzz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 10:02:00 +0000</lastBuildDate><atom:link href="https://lypzzz.github.io/springboot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>spring-boot入门案例</title>
       <link>https://lypzzz.github.io/springboot/spring-boot%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/</link>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>spring-boot集成Mybatis - 莫奈子博客</title>
+  <meta name="description" content="官方文档 http://mybatis.org/spring-boot-starter/"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "莫奈子博客",
+    
+    "url": "https:\/\/lypzzz.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lypzzz.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lypzzz.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lypzzz.github.io\/springboot\/spring-boot%E9%9B%86%E6%88%90mybatis\/",
+          "name": "Spring boot集成 mybatis"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "莫奈子"
+  },
+  "headline": "spring-boot集成Mybatis",
+  "description" : "官方文档 http:\/\/mybatis.org\/spring-boot-starter\/\n",
+  "inLanguage" : "en",
+  "wordCount":  356 ,
+  "datePublished" : "2021-09-09T17:22:00",
+  "dateModified" : "2021-09-09T17:22:00",
+  "image" : "https:\/\/lypzzz.github.io\/",
+  "keywords" : [ "spring-boot, mybatis" ],
+  "mainEntityOfPage" : "https:\/\/lypzzz.github.io\/springboot\/spring-boot%E9%9B%86%E6%88%90mybatis\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lypzzz.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lypzzz.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="spring-boot集成Mybatis" />
+<meta property="og:description" content="官方文档 http://mybatis.org/spring-boot-starter/">
+<meta property="og:url" content="https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="莫奈子博客" />
+
+  <meta name="twitter:title" content="spring-boot集成Mybatis" />
+  <meta name="twitter:description" content="官方文档 http://mybatis.org/spring-boot-starter/">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.101.0" />
+  <link rel="alternate" href="https://lypzzz.github.io/index.xml" type="application/rss+xml" title="莫奈子博客"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lypzzz.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lypzzz.github.io/css/syntax.css" /><link rel="stylesheet" href="https://lypzzz.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lypzzz.github.io/">莫奈子博客</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="首页" href="/">首页</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="分类" href="/categories/">分类</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="标签" href="/tags/">标签</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="关于" href="/about/">关于</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="springboot-heading">
+              
+                <h1>spring-boot集成Mybatis</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>官方文档 <a href="http://mybatis.org/spring-boot-starter/">http://mybatis.org/spring-boot-starter/</a></p>
+<h2 id="准备数据库及表">准备数据库及表</h2>
+<p>数据库如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> test;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">table</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">exists</span> <span style="color:#f92672">`</span>employees<span style="color:#f92672">`</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>employees<span style="color:#f92672">`</span>
+</span></span><span style="display:flex;"><span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>emp_no<span style="color:#f92672">`</span>     int(<span style="color:#ae81ff">11</span>)     <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>birth_date<span style="color:#f92672">`</span> date        <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>first_name<span style="color:#f92672">`</span> varchar(<span style="color:#ae81ff">14</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>last_name<span style="color:#f92672">`</span>  varchar(<span style="color:#ae81ff">16</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>gender<span style="color:#f92672">`</span>     char(<span style="color:#ae81ff">1</span>)     <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>hire_date<span style="color:#f92672">`</span>  date        <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>emp_no<span style="color:#f92672">`</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10001</span>,<span style="color:#e6db74">&#39;1953-09-02&#39;</span>,<span style="color:#e6db74">&#39;Georgi&#39;</span>,<span style="color:#e6db74">&#39;Facello&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1986-06-26&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10002</span>,<span style="color:#e6db74">&#39;1964-06-02&#39;</span>,<span style="color:#e6db74">&#39;Bezalel&#39;</span>,<span style="color:#e6db74">&#39;Simmel&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1985-11-21&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10003</span>,<span style="color:#e6db74">&#39;1959-12-03&#39;</span>,<span style="color:#e6db74">&#39;Parto&#39;</span>,<span style="color:#e6db74">&#39;Bamford&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1986-08-28&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10004</span>,<span style="color:#e6db74">&#39;1954-05-01&#39;</span>,<span style="color:#e6db74">&#39;Chirstian&#39;</span>,<span style="color:#e6db74">&#39;Koblick&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1986-12-01&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10005</span>,<span style="color:#e6db74">&#39;1955-01-21&#39;</span>,<span style="color:#e6db74">&#39;Kyoichi&#39;</span>,<span style="color:#e6db74">&#39;Maliniak&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1989-09-12&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10006</span>,<span style="color:#e6db74">&#39;1953-04-20&#39;</span>,<span style="color:#e6db74">&#39;Anneke&#39;</span>,<span style="color:#e6db74">&#39;Preusig&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1989-06-02&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10007</span>,<span style="color:#e6db74">&#39;1957-05-23&#39;</span>,<span style="color:#e6db74">&#39;Tzvetan&#39;</span>,<span style="color:#e6db74">&#39;Zielinski&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1989-02-10&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10008</span>,<span style="color:#e6db74">&#39;1958-02-19&#39;</span>,<span style="color:#e6db74">&#39;Saniya&#39;</span>,<span style="color:#e6db74">&#39;Kalloufi&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1994-09-15&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10009</span>,<span style="color:#e6db74">&#39;1952-04-19&#39;</span>,<span style="color:#e6db74">&#39;Sumant&#39;</span>,<span style="color:#e6db74">&#39;Peac&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1985-02-18&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10010</span>,<span style="color:#e6db74">&#39;1963-06-01&#39;</span>,<span style="color:#e6db74">&#39;Duangkaew&#39;</span>,<span style="color:#e6db74">&#39;Piveteau&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1989-08-24&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10011</span>,<span style="color:#e6db74">&#39;1953-11-07&#39;</span>,<span style="color:#e6db74">&#39;Mary&#39;</span>,<span style="color:#e6db74">&#39;Sluis&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1990-01-22&#39;</span>);
+</span></span></code></pre></div><h2 id="集成mybatis">集成mybatis</h2>
+<p>mybatis-spring-boot-starter起步依赖提供了集成mybatis的简便方式</p>
+<p><strong>添加maven依赖</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>2.2.0<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p><strong>配置</strong></p>
+<p>数据源相关配置信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">datasource</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.cj.jdbc.Driver</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">root</span>
+</span></span></code></pre></div><p>mybatis相关配置信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">mybatis</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># config-location: classpath:mybatis-config.xml # mybatis全局配置文件路径</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">mapper-locations</span>: <span style="color:#ae81ff">classpath:com/lypzz/mapper/*.xml</span> <span style="color:#75715e"># mapper映射文件路径</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type-aliases-package</span>: <span style="color:#ae81ff">com.lypzz.entity</span> <span style="color:#75715e"># 实体类支持使用别名(类名或类名首字母小写)，多个包之间用【,; \t\n】分开</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">configuration</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">map-underscore-to-camel-case</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># 自动映射驼峰命名与下划线</span>
+</span></span></code></pre></div><h2 id="使用mybatis">使用mybatis</h2>
+<p>与直接使用mybatis相比，<em>mybatis-spring-boot-starter</em> 的简化了很多，无需手动加载配置文件，不用手动创建 <code>SqlSessionFactory</code> 以及 <code>SqlSession</code> 对象，只需要编写Mapper接口以及xml映射文件（或基于注解的配置）即可。</p>
+<p><strong>定义实体类</strong></p>
+<p><em>com.lypzz.entity.Employee</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Data</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> number<span style="color:#f92672">;</span> <span style="color:#75715e">// 员工编号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Date birthday<span style="color:#f92672">;</span> <span style="color:#75715e">// 出生日期
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> String firstName<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String lastName<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span> <span style="color:#75715e">// 性别
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Date hireDay<span style="color:#f92672">;</span> <span style="color:#75715e">// 雇佣日期
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><strong>定义Mapper接口</strong></p>
+<p>要想被Spring容器发现，需要在接口上使用注解<code>@Mapper</code>，或者在启动引导类上使用 <code>@MapperScan</code> 指定要扫描的包</p>
+<p><em>com.lypzz.mapper.EmployeeMapper</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Mapper</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">EmployeeMapper</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><strong>编写xml映射文件</strong></p>
+<blockquote>
+<p>注意：xml映射文件的路径要与对应的mapper接口包名对应，同时必须与配置中的<code>mapper-locations</code>相同</p>
+</blockquote>
+<p><em>com/lypzz/mapper/EmployeeMapper.xml</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE mapper
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;com.lypzz.mapper.EmployeeMapper&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;resultMap</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;employeeResultMap&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;employee&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;number&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;emp_no&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;birthday&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;birth_date&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;firstName&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;first_name&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;lastName&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;last_name&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;gender&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;gender&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;hireDay&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;hire_date&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/resultMap&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;findAll&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;employeeResultMap&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        select * from employees;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/select&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/mapper&gt;</span>
+</span></span></code></pre></div><p><strong>执行crud</strong></p>
+<p><em>com.lypzz.controller.MyController</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> EmployeeMapper employeeMapper<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">MyController</span><span style="color:#f92672">(</span>EmployeeMapper employeeMapper<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">employeeMapper</span> <span style="color:#f92672">=</span> employeeMapper<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/employees&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">showAllEmployees</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> employees <span style="color:#f92672">=</span> employeeMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> employees<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="修改数据源">修改数据源</h2>
+<p>spring-boot jdbc默认使用 <strong>Hikari</strong> 作为数据源，如果要使用其它数据源，需要进行配置。</p>
+<p><strong>使用Druid数据源</strong></p>
+<p>官网文档</p>
+<ul>
+<li><a href="https://github.com/alibaba/druid/wiki/">https://github.com/alibaba/druid/wiki/</a></li>
+<li><a href="https://hub.fastgit.org/alibaba/druid/tree/master/druid-spring-boot-starter">https://hub.fastgit.org/alibaba/druid/tree/master/druid-spring-boot-starter</a></li>
+</ul>
+<p>添加maven依赖</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>druid-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>1.2.6<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>在配置文件中设置数据源为 druid</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">spring.datasource.type = com.alibaba.druid.pool.DruidDataSource
+</code></pre><p>druid提供的配置项以 <code>spring.datasource.druid</code> 开头，具体见文档。</p>
+<h2 id="集成pagehelper插件">集成PageHelper插件</h2>
+<p>PageHelper插件文档：https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md</p>
+<p><strong>添加maven依赖</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>com.github.pagehelper<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>pagehelper-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>1.4.1<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p><strong>配置</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">pagehelper</span>:
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  auto-dialect: true # 是否开启自动检测sql方言</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">helper-dialect</span>: <span style="color:#ae81ff">mysql</span> <span style="color:#75715e"># 设置sql方言</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">reasonable</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># 合理化分页参数，默认false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">params</span>: <span style="color:#ae81ff">pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">row-bounds-with-count</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><p><strong>使用</strong></p>
+<p>只需要执行具体查询之前，使用 <code>PageHelper.startPage()</code> 方法即可</p>
+<blockquote>
+<p>注意：PageHelper插件在分页时，会在mapper中的SQL语句后面进行拼接，所以，SQL语句不要加分号 <em>;</em></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> pageNum <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> pageSize <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>String orderBy <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;emp_no DESC&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PageHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">startPage</span><span style="color:#f92672">(</span>pageNum<span style="color:#f92672">,</span> pageSize<span style="color:#f92672">,</span>orderBy<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> employees <span style="color:#f92672">=</span> employeeMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
+</span></span></code></pre></div><p>可以将查询结果包装到 <code>PageInfo</code> 对象中，以获取详细的分页信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>PageInfo<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> page <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PageInfo<span style="color:#f92672">&lt;&gt;(</span>employees<span style="color:#f92672">);</span>
+</span></span></code></pre></div>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://lypzzz.github.io//tags/spring-boot/">spring-boot</a>&nbsp;
+            
+              <a href="https://lypzzz.github.io//tags/mybatis/">mybatis</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis-plus/" data-toggle="tooltip" data-placement="top" title="spring-boot集成mybatis-plus">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://lypzzz.github.io/springboot/spring-boot%E6%8B%A6%E6%88%AA%E5%99%A8/" data-toggle="tooltip" data-placement="top" title="spring-boot拦截器">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lypzzz.github.io/">莫奈子博客</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://lypzzz.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lypzzz.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
