@@ -58,7 +58,7 @@
   "headline": "spring-boot集成Mybatis",
   "description" : "官方文档 http:\/\/mybatis.org\/spring-boot-starter\/\n",
   "inLanguage" : "en",
-  "wordCount":  356 ,
+  "wordCount":  479 ,
   "datePublished" : "2021-09-09T17:22:00",
   "dateModified" : "2021-09-09T17:22:00",
   "image" : "https:\/\/lypzzz.github.io\/",
@@ -135,6 +135,18 @@
           
         
 
+        
+          
+            <li>
+              
+                
+              
+                
+                  <a href="/zh" lang="zh">zh</a>
+                
+              
+            </li>
+          
         
 
         
@@ -241,125 +253,271 @@
         <p>官方文档 <a href="http://mybatis.org/spring-boot-starter/">http://mybatis.org/spring-boot-starter/</a></p>
 <h2 id="准备数据库及表">准备数据库及表</h2>
 <p>数据库如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> test;
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-0"> 0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-1"> 1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-2"> 2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-3"> 3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-4"> 4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-5"> 5</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-6"> 6</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-7"> 7</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-8"> 8</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-9"> 9</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-10">10</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-11">11</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-12">12</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-13">13</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-14">14</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-15">15</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-16"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-16">16</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-17"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-17">17</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-18"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-18">18</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-19"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-19">19</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-20"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-20">20</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-21"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-21">21</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-22"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-22">22</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-23"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-23">23</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-24"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-24">24</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#a90d91">CREATE</span> <span style="color:#a90d91">TABLE</span> <span style="color:#a90d91">IF</span> <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">EXISTS</span> <span style="color:#000">test</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">table</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">exists</span> <span style="color:#f92672">`</span>employees<span style="color:#f92672">`</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>employees<span style="color:#f92672">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">drop</span> <span style="color:#a90d91">table</span> <span style="color:#a90d91">if</span> <span style="color:#a90d91">exists</span> <span style="color:#000">`</span><span style="color:#000">employees</span><span style="color:#000">`</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">CREATE</span> <span style="color:#a90d91">TABLE</span> <span style="color:#000">`</span><span style="color:#000">employees</span><span style="color:#000">`</span>
 </span></span><span style="display:flex;"><span>(
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>emp_no<span style="color:#f92672">`</span>     int(<span style="color:#ae81ff">11</span>)     <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>birth_date<span style="color:#f92672">`</span> date        <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>first_name<span style="color:#f92672">`</span> varchar(<span style="color:#ae81ff">14</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>last_name<span style="color:#f92672">`</span>  varchar(<span style="color:#ae81ff">16</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>gender<span style="color:#f92672">`</span>     char(<span style="color:#ae81ff">1</span>)     <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">`</span>hire_date<span style="color:#f92672">`</span>  date        <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>emp_no<span style="color:#f92672">`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#000">`</span><span style="color:#000">emp_no</span><span style="color:#000">`</span>     <span style="color:#a90d91">int</span>(<span style="color:#1c01ce">11</span>)     <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000">`</span><span style="color:#000">birth_date</span><span style="color:#000">`</span> <span style="color:#a90d91">date</span>        <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000">`</span><span style="color:#000">first_name</span><span style="color:#000">`</span> <span style="color:#a90d91">varchar</span>(<span style="color:#1c01ce">14</span>) <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000">`</span><span style="color:#000">last_name</span><span style="color:#000">`</span>  <span style="color:#a90d91">varchar</span>(<span style="color:#1c01ce">16</span>) <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000">`</span><span style="color:#000">gender</span><span style="color:#000">`</span>     <span style="color:#a90d91">char</span>(<span style="color:#1c01ce">1</span>)     <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000">`</span><span style="color:#000">hire_date</span><span style="color:#000">`</span>  <span style="color:#a90d91">date</span>        <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">PRIMARY</span> <span style="color:#a90d91">KEY</span> (<span style="color:#000">`</span><span style="color:#000">emp_no</span><span style="color:#000">`</span>)
 </span></span><span style="display:flex;"><span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10001</span>,<span style="color:#e6db74">&#39;1953-09-02&#39;</span>,<span style="color:#e6db74">&#39;Georgi&#39;</span>,<span style="color:#e6db74">&#39;Facello&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1986-06-26&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10002</span>,<span style="color:#e6db74">&#39;1964-06-02&#39;</span>,<span style="color:#e6db74">&#39;Bezalel&#39;</span>,<span style="color:#e6db74">&#39;Simmel&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1985-11-21&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10003</span>,<span style="color:#e6db74">&#39;1959-12-03&#39;</span>,<span style="color:#e6db74">&#39;Parto&#39;</span>,<span style="color:#e6db74">&#39;Bamford&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1986-08-28&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10004</span>,<span style="color:#e6db74">&#39;1954-05-01&#39;</span>,<span style="color:#e6db74">&#39;Chirstian&#39;</span>,<span style="color:#e6db74">&#39;Koblick&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1986-12-01&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10005</span>,<span style="color:#e6db74">&#39;1955-01-21&#39;</span>,<span style="color:#e6db74">&#39;Kyoichi&#39;</span>,<span style="color:#e6db74">&#39;Maliniak&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1989-09-12&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10006</span>,<span style="color:#e6db74">&#39;1953-04-20&#39;</span>,<span style="color:#e6db74">&#39;Anneke&#39;</span>,<span style="color:#e6db74">&#39;Preusig&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1989-06-02&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10007</span>,<span style="color:#e6db74">&#39;1957-05-23&#39;</span>,<span style="color:#e6db74">&#39;Tzvetan&#39;</span>,<span style="color:#e6db74">&#39;Zielinski&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1989-02-10&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10008</span>,<span style="color:#e6db74">&#39;1958-02-19&#39;</span>,<span style="color:#e6db74">&#39;Saniya&#39;</span>,<span style="color:#e6db74">&#39;Kalloufi&#39;</span>,<span style="color:#e6db74">&#39;M&#39;</span>,<span style="color:#e6db74">&#39;1994-09-15&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10009</span>,<span style="color:#e6db74">&#39;1952-04-19&#39;</span>,<span style="color:#e6db74">&#39;Sumant&#39;</span>,<span style="color:#e6db74">&#39;Peac&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1985-02-18&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10010</span>,<span style="color:#e6db74">&#39;1963-06-01&#39;</span>,<span style="color:#e6db74">&#39;Duangkaew&#39;</span>,<span style="color:#e6db74">&#39;Piveteau&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1989-08-24&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">10011</span>,<span style="color:#e6db74">&#39;1953-11-07&#39;</span>,<span style="color:#e6db74">&#39;Mary&#39;</span>,<span style="color:#e6db74">&#39;Sluis&#39;</span>,<span style="color:#e6db74">&#39;F&#39;</span>,<span style="color:#e6db74">&#39;1990-01-22&#39;</span>);
-</span></span></code></pre></div><h2 id="集成mybatis">集成mybatis</h2>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10001</span>,<span style="color:#c41a16">&#39;1953-09-02&#39;</span>,<span style="color:#c41a16">&#39;Georgi&#39;</span>,<span style="color:#c41a16">&#39;Facello&#39;</span>,<span style="color:#c41a16">&#39;M&#39;</span>,<span style="color:#c41a16">&#39;1986-06-26&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10002</span>,<span style="color:#c41a16">&#39;1964-06-02&#39;</span>,<span style="color:#c41a16">&#39;Bezalel&#39;</span>,<span style="color:#c41a16">&#39;Simmel&#39;</span>,<span style="color:#c41a16">&#39;F&#39;</span>,<span style="color:#c41a16">&#39;1985-11-21&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10003</span>,<span style="color:#c41a16">&#39;1959-12-03&#39;</span>,<span style="color:#c41a16">&#39;Parto&#39;</span>,<span style="color:#c41a16">&#39;Bamford&#39;</span>,<span style="color:#c41a16">&#39;M&#39;</span>,<span style="color:#c41a16">&#39;1986-08-28&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10004</span>,<span style="color:#c41a16">&#39;1954-05-01&#39;</span>,<span style="color:#c41a16">&#39;Chirstian&#39;</span>,<span style="color:#c41a16">&#39;Koblick&#39;</span>,<span style="color:#c41a16">&#39;M&#39;</span>,<span style="color:#c41a16">&#39;1986-12-01&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10005</span>,<span style="color:#c41a16">&#39;1955-01-21&#39;</span>,<span style="color:#c41a16">&#39;Kyoichi&#39;</span>,<span style="color:#c41a16">&#39;Maliniak&#39;</span>,<span style="color:#c41a16">&#39;M&#39;</span>,<span style="color:#c41a16">&#39;1989-09-12&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10006</span>,<span style="color:#c41a16">&#39;1953-04-20&#39;</span>,<span style="color:#c41a16">&#39;Anneke&#39;</span>,<span style="color:#c41a16">&#39;Preusig&#39;</span>,<span style="color:#c41a16">&#39;F&#39;</span>,<span style="color:#c41a16">&#39;1989-06-02&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10007</span>,<span style="color:#c41a16">&#39;1957-05-23&#39;</span>,<span style="color:#c41a16">&#39;Tzvetan&#39;</span>,<span style="color:#c41a16">&#39;Zielinski&#39;</span>,<span style="color:#c41a16">&#39;F&#39;</span>,<span style="color:#c41a16">&#39;1989-02-10&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10008</span>,<span style="color:#c41a16">&#39;1958-02-19&#39;</span>,<span style="color:#c41a16">&#39;Saniya&#39;</span>,<span style="color:#c41a16">&#39;Kalloufi&#39;</span>,<span style="color:#c41a16">&#39;M&#39;</span>,<span style="color:#c41a16">&#39;1994-09-15&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10009</span>,<span style="color:#c41a16">&#39;1952-04-19&#39;</span>,<span style="color:#c41a16">&#39;Sumant&#39;</span>,<span style="color:#c41a16">&#39;Peac&#39;</span>,<span style="color:#c41a16">&#39;F&#39;</span>,<span style="color:#c41a16">&#39;1985-02-18&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10010</span>,<span style="color:#c41a16">&#39;1963-06-01&#39;</span>,<span style="color:#c41a16">&#39;Duangkaew&#39;</span>,<span style="color:#c41a16">&#39;Piveteau&#39;</span>,<span style="color:#c41a16">&#39;F&#39;</span>,<span style="color:#c41a16">&#39;1989-08-24&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#000">employees</span> <span style="color:#a90d91">VALUES</span>(<span style="color:#1c01ce">10011</span>,<span style="color:#c41a16">&#39;1953-11-07&#39;</span>,<span style="color:#c41a16">&#39;Mary&#39;</span>,<span style="color:#c41a16">&#39;Sluis&#39;</span>,<span style="color:#c41a16">&#39;F&#39;</span>,<span style="color:#c41a16">&#39;1990-01-22&#39;</span>);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="集成mybatis">集成mybatis</h2>
 <p>mybatis-spring-boot-starter起步依赖提供了集成mybatis的简便方式</p>
 <p><strong>添加maven依赖</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>2.2.0<span style="color:#f92672">&lt;/version&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-4">4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-5">5</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-6">6</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-7">7</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-8">8</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-9">9</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#000">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#000">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;version&gt;</span>2.2.0<span style="color:#000">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependency&gt;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
-</span></span></code></pre></div><p><strong>配置</strong></p>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>mysql<span style="color:#000">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#000">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependency&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>配置</strong></p>
 <p>数据源相关配置信息</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">datasource</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.cj.jdbc.Driver</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">root</span>
-</span></span></code></pre></div><p>mybatis相关配置信息</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">mybatis</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># config-location: classpath:mybatis-config.xml # mybatis全局配置文件路径</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">mapper-locations</span>: <span style="color:#ae81ff">classpath:com/lypzz/mapper/*.xml</span> <span style="color:#75715e"># mapper映射文件路径</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type-aliases-package</span>: <span style="color:#ae81ff">com.lypzz.entity</span> <span style="color:#75715e"># 实体类支持使用别名(类名或类名首字母小写)，多个包之间用【,; \t\n】分开</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">configuration</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">map-underscore-to-camel-case</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># 自动映射驼峰命名与下划线</span>
-</span></span></code></pre></div><h2 id="使用mybatis">使用mybatis</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-4">4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-5">5</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#000">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#000">datasource</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#000">driver-class-name</span>: <span style="color:#1c01ce">com.mysql.cj.jdbc.Driver</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">url</span>: <span style="color:#1c01ce">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">username</span>: <span style="color:#1c01ce">root</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">password</span>: <span style="color:#1c01ce">root</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>mybatis相关配置信息</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-4">4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-5">5</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#000">mybatis</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#177500"># config-location: classpath:mybatis-config.xml # mybatis全局配置文件路径</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">mapper-locations</span>: <span style="color:#1c01ce">classpath:com/lypzz/mapper/*.xml</span> <span style="color:#177500"># mapper映射文件路径</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">type-aliases-package</span>: <span style="color:#1c01ce">com.lypzz.entity</span> <span style="color:#177500"># 实体类支持使用别名(类名或类名首字母小写)，多个包之间用【,; \t\n】分开</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">configuration</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#000">map-underscore-to-camel-case</span>: <span style="color:#a90d91">true</span> <span style="color:#177500"># 自动映射驼峰命名与下划线</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="使用mybatis">使用mybatis</h2>
 <p>与直接使用mybatis相比，<em>mybatis-spring-boot-starter</em> 的简化了很多，无需手动加载配置文件，不用手动创建 <code>SqlSessionFactory</code> 以及 <code>SqlSession</code> 对象，只需要编写Mapper接口以及xml映射文件（或基于注解的配置）即可。</p>
 <p><strong>定义实体类</strong></p>
 <p><em>com.lypzz.entity.Employee</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Data</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> number<span style="color:#f92672">;</span> <span style="color:#75715e">// 员工编号
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Date birthday<span style="color:#f92672">;</span> <span style="color:#75715e">// 出生日期
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> String firstName<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String lastName<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span> <span style="color:#75715e">// 性别
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Date hireDay<span style="color:#f92672">;</span> <span style="color:#75715e">// 雇佣日期
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p><strong>定义Mapper接口</strong></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-4">4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-5">5</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-6">6</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-7">7</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-8">8</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-9">9</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">@Data</span>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">Employee</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#a90d91">int</span> <span style="color:#000">number</span><span style="color:#000">;</span> <span style="color:#177500">// 员工编号
+</span></span></span><span style="display:flex;"><span><span style="color:#177500"></span>    <span style="color:#a90d91">private</span> <span style="color:#000">Date</span> <span style="color:#000">birthday</span><span style="color:#000">;</span> <span style="color:#177500">// 出生日期
+</span></span></span><span style="display:flex;"><span><span style="color:#177500"></span>    <span style="color:#a90d91">private</span> <span style="color:#000">String</span> <span style="color:#000">firstName</span><span style="color:#000">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#000">String</span> <span style="color:#000">lastName</span><span style="color:#000">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#000">String</span> <span style="color:#000">gender</span><span style="color:#000">;</span> <span style="color:#177500">// 性别
+</span></span></span><span style="display:flex;"><span><span style="color:#177500"></span>    <span style="color:#a90d91">private</span> <span style="color:#000">Date</span> <span style="color:#000">hireDay</span><span style="color:#000">;</span> <span style="color:#177500">// 雇佣日期
+</span></span></span><span style="display:flex;"><span><span style="color:#177500"></span><span style="color:#000">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>定义Mapper接口</strong></p>
 <p>要想被Spring容器发现，需要在接口上使用注解<code>@Mapper</code>，或者在启动引导类上使用 <code>@MapperScan</code> 指定要扫描的包</p>
 <p><em>com.lypzz.mapper.EmployeeMapper</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Mapper</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">EmployeeMapper</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p><strong>编写xml映射文件</strong></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-4">4</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">@Mapper</span>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">interface</span> <span style="color:#3f6e75">EmployeeMapper</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">List</span><span style="color:#000">&lt;</span><span style="color:#000">Employee</span><span style="color:#000">&gt;</span> <span style="color:#000">findAll</span><span style="color:#000">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>编写xml映射文件</strong></p>
 <blockquote>
 <p>注意：xml映射文件的路径要与对应的mapper接口包名对应，同时必须与配置中的<code>mapper-locations</code>相同</p>
 </blockquote>
 <p><em>com/lypzz/mapper/EmployeeMapper.xml</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE mapper
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;com.lypzz.mapper.EmployeeMapper&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;resultMap</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;employeeResultMap&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;employee&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;number&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;emp_no&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;birthday&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;birth_date&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;firstName&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;first_name&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;lastName&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;last_name&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;gender&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;gender&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;hireDay&#34;</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;hire_date&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/resultMap&gt;</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-0"> 0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-1"> 1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-2"> 2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-3"> 3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-4"> 4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-5"> 5</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-6"> 6</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-7"> 7</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-8"> 8</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-9"> 9</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-10">10</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-11">11</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-12">12</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-13"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-13">13</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-14"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-14">14</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-15"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-15">15</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-16"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-16">16</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-17"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-6-17">17</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#633820">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#633820">&lt;!DOCTYPE mapper
+</span></span></span><span style="display:flex;"><span><span style="color:#633820">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#633820">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;mapper</span> <span style="color:#836c28">namespace=</span><span style="color:#c41a16">&#34;com.lypzz.mapper.EmployeeMapper&#34;</span><span style="color:#000">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;resultMap</span> <span style="color:#836c28">id=</span><span style="color:#c41a16">&#34;employeeResultMap&#34;</span> <span style="color:#836c28">type=</span><span style="color:#c41a16">&#34;employee&#34;</span><span style="color:#000">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;result</span> <span style="color:#836c28">property=</span><span style="color:#c41a16">&#34;number&#34;</span> <span style="color:#836c28">column=</span><span style="color:#c41a16">&#34;emp_no&#34;</span><span style="color:#000">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;result</span> <span style="color:#836c28">property=</span><span style="color:#c41a16">&#34;birthday&#34;</span> <span style="color:#836c28">column=</span><span style="color:#c41a16">&#34;birth_date&#34;</span><span style="color:#000">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;result</span> <span style="color:#836c28">property=</span><span style="color:#c41a16">&#34;firstName&#34;</span> <span style="color:#836c28">column=</span><span style="color:#c41a16">&#34;first_name&#34;</span><span style="color:#000">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;result</span> <span style="color:#836c28">property=</span><span style="color:#c41a16">&#34;lastName&#34;</span> <span style="color:#836c28">column=</span><span style="color:#c41a16">&#34;last_name&#34;</span><span style="color:#000">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;result</span> <span style="color:#836c28">property=</span><span style="color:#c41a16">&#34;gender&#34;</span> <span style="color:#836c28">column=</span><span style="color:#c41a16">&#34;gender&#34;</span><span style="color:#000">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;result</span> <span style="color:#836c28">property=</span><span style="color:#c41a16">&#34;hireDay&#34;</span> <span style="color:#836c28">column=</span><span style="color:#c41a16">&#34;hire_date&#34;</span><span style="color:#000">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;/resultMap&gt;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;findAll&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;employeeResultMap&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;select</span> <span style="color:#836c28">id=</span><span style="color:#c41a16">&#34;findAll&#34;</span> <span style="color:#836c28">resultMap=</span><span style="color:#c41a16">&#34;employeeResultMap&#34;</span><span style="color:#000">&gt;</span>
 </span></span><span style="display:flex;"><span>        select * from employees;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/select&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/mapper&gt;</span>
-</span></span></code></pre></div><p><strong>执行crud</strong></p>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;/select&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/mapper&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>执行crud</strong></p>
 <p><em>com.lypzz.controller.MyController</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> EmployeeMapper employeeMapper<span style="color:#f92672">;</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-0"> 0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-1"> 1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-2"> 2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-3"> 3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-4"> 4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-5"> 5</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-6"> 6</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-7"> 7</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-8"> 8</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-9"> 9</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-10">10</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-11">11</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-12">12</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-13"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-13">13</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-14"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-14">14</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-15"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-15">15</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-16"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-16">16</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-17"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-7-17">17</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyController</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#a90d91">final</span> <span style="color:#000">EmployeeMapper</span> <span style="color:#000">employeeMapper</span><span style="color:#000">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">MyController</span><span style="color:#f92672">(</span>EmployeeMapper employeeMapper<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">employeeMapper</span> <span style="color:#f92672">=</span> employeeMapper<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">public</span> <span style="color:#000">MyController</span><span style="color:#000">(</span><span style="color:#000">EmployeeMapper</span> <span style="color:#000">employeeMapper</span><span style="color:#000">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a90d91">this</span><span style="color:#000">.</span><span style="color:#836c28">employeeMapper</span> <span style="color:#000">=</span> <span style="color:#000">employeeMapper</span><span style="color:#000">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/employees&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">showAllEmployees</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> employees <span style="color:#f92672">=</span> employeeMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> employees<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="修改数据源">修改数据源</h2>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">@GetMapping</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;/employees&#34;</span><span style="color:#000">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">public</span> <span style="color:#000">Object</span> <span style="color:#000">showAllEmployees</span><span style="color:#000">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">List</span><span style="color:#000">&lt;</span><span style="color:#000">Employee</span><span style="color:#000">&gt;</span> <span style="color:#000">employees</span> <span style="color:#000">=</span> <span style="color:#000">employeeMapper</span><span style="color:#000">.</span><span style="color:#836c28">findAll</span><span style="color:#000">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a90d91">return</span> <span style="color:#000">employees</span><span style="color:#000">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="修改数据源">修改数据源</h2>
 <p>spring-boot jdbc默认使用 <strong>Hikari</strong> 作为数据源，如果要使用其它数据源，需要进行配置。</p>
 <p><strong>使用Druid数据源</strong></p>
 <p>官网文档</p>
@@ -368,44 +526,105 @@
 <li><a href="https://hub.fastgit.org/alibaba/druid/tree/master/druid-spring-boot-starter">https://hub.fastgit.org/alibaba/druid/tree/master/druid-spring-boot-starter</a></li>
 </ul>
 <p>添加maven依赖</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>druid-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>1.2.6<span style="color:#f92672">&lt;/version&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
-</span></span></code></pre></div><p>在配置文件中设置数据源为 druid</p>
-<pre tabindex="0"><code class="language-properties" data-lang="properties">spring.datasource.type = com.alibaba.druid.pool.DruidDataSource
-</code></pre><p>druid提供的配置项以 <code>spring.datasource.druid</code> 开头，具体见文档。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-8-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-8-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-8-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-8-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-8-4">4</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>com.alibaba<span style="color:#000">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>druid-spring-boot-starter<span style="color:#000">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;version&gt;</span>1.2.6<span style="color:#000">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependency&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在配置文件中设置数据源为 druid</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-9-0">0</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>spring.datasource.type = com.alibaba.druid.pool.DruidDataSource
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>druid提供的配置项以 <code>spring.datasource.druid</code> 开头，具体见文档。</p>
 <h2 id="集成pagehelper插件">集成PageHelper插件</h2>
 <p>PageHelper插件文档：https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md</p>
 <p><strong>添加maven依赖</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter --&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>com.github.pagehelper<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>pagehelper-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>1.4.1<span style="color:#f92672">&lt;/version&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
-</span></span></code></pre></div><p><strong>配置</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">pagehelper</span>:
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#  auto-dialect: true # 是否开启自动检测sql方言</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">helper-dialect</span>: <span style="color:#ae81ff">mysql</span> <span style="color:#75715e"># 设置sql方言</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">reasonable</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># 合理化分页参数，默认false</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">params</span>: <span style="color:#ae81ff">pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">row-bounds-with-count</span>: <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><p><strong>使用</strong></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-10-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-10-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-10-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-10-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-10-4">4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-10-5">5</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#177500">&lt;!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>com.github.pagehelper<span style="color:#000">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>pagehelper-spring-boot-starter<span style="color:#000">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;version&gt;</span>1.4.1<span style="color:#000">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependency&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>配置</strong></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-11-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-11-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-11-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-11-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-11-4">4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-11-5">5</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000">pagehelper</span>:
+</span></span><span style="display:flex;"><span><span style="color:#177500">#  auto-dialect: true # 是否开启自动检测sql方言</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">helper-dialect</span>: <span style="color:#1c01ce">mysql</span> <span style="color:#177500"># 设置sql方言</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">reasonable</span>: <span style="color:#a90d91">true</span> <span style="color:#177500"># 合理化分页参数，默认false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">params</span>: <span style="color:#1c01ce">pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">row-bounds-with-count</span>: <span style="color:#a90d91">false</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>使用</strong></p>
 <p>只需要执行具体查询之前，使用 <code>PageHelper.startPage()</code> 方法即可</p>
 <blockquote>
 <p>注意：PageHelper插件在分页时，会在mapper中的SQL语句后面进行拼接，所以，SQL语句不要加分号 <em>;</em></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> pageNum <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> pageSize <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>String orderBy <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;emp_no DESC&#34;</span><span style="color:#f92672">;</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-12-0">0</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-12-1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-12-2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-12-3">3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-12-4">4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-12-5">5</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a90d91">int</span> <span style="color:#000">pageNum</span> <span style="color:#000">=</span> <span style="color:#000">1</span><span style="color:#000">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">int</span> <span style="color:#000">pageSize</span> <span style="color:#000">=</span> <span style="color:#000">3</span><span style="color:#000">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">String</span> <span style="color:#000">orderBy</span> <span style="color:#000">=</span> <span style="color:#c41a16">&#34;emp_no DESC&#34;</span><span style="color:#000">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>PageHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">startPage</span><span style="color:#f92672">(</span>pageNum<span style="color:#f92672">,</span> pageSize<span style="color:#f92672">,</span>orderBy<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> employees <span style="color:#f92672">=</span> employeeMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
-</span></span></code></pre></div><p>可以将查询结果包装到 <code>PageInfo</code> 对象中，以获取详细的分页信息</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>PageInfo<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;</span> page <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PageInfo<span style="color:#f92672">&lt;&gt;(</span>employees<span style="color:#f92672">);</span>
-</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span><span style="color:#000">PageHelper</span><span style="color:#000">.</span><span style="color:#836c28">startPage</span><span style="color:#000">(</span><span style="color:#000">pageNum</span><span style="color:#000">,</span> <span style="color:#000">pageSize</span><span style="color:#000">,</span><span style="color:#000">orderBy</span><span style="color:#000">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">List</span><span style="color:#000">&lt;</span><span style="color:#000">Employee</span><span style="color:#000">&gt;</span> <span style="color:#000">employees</span> <span style="color:#000">=</span> <span style="color:#000">employeeMapper</span><span style="color:#000">.</span><span style="color:#836c28">findAll</span><span style="color:#000">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以将查询结果包装到 <code>PageInfo</code> 对象中，以获取详细的分页信息</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-13-0">0</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">PageInfo</span><span style="color:#000">&lt;</span><span style="color:#000">Employee</span><span style="color:#000">&gt;</span> <span style="color:#000">page</span> <span style="color:#000">=</span> <span style="color:#a90d91">new</span> <span style="color:#000">PageInfo</span><span style="color:#000">&lt;&gt;(</span><span style="color:#000">employees</span><span style="color:#000">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 
         
           <div class="blog-tags">
@@ -468,7 +687,7 @@
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
           
         </p>
       </div>

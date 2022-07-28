@@ -10,6 +10,7 @@ pre code.hljs {
 
 .highlight tr, .highlight pre {
   border: none;
+  background-color: #f8f8f8!important;
 }
 
 .highlight div:first-child {
@@ -21,7 +22,7 @@ pre code.hljs {
   border-top-right-radius: unset;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: unset;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 
 .highlight td:last-child pre, .highlight pre {
