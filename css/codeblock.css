@@ -1,16 +1,39 @@
 /* --- Code blocks --- */
+code {
+  color: #0085a1;
+  background-color: #f5f5f5;
+}
 
 .chroma .ln {
   margin-right: 0.8em;
   padding: 0 0.4em 0 0.4em;
 }
+
 pre code.hljs {
   padding: 9.5px;
 }
 
+.highlight {
+  border: 1px solid #cccccc;
+  background-color: #f5f5f5;
+}
+
+.highlight td:first-child {
+  border: none;
+  border-right: 1px solid #cccccc;
+  background-color: transparent;
+}
+
+.highlight td:last-child {
+  border: none;
+  width: 100%;
+  overflow-x: scroll;
+  background-color: transparent;
+}
+
 .highlight tr, .highlight pre {
   border: none;
-  background-color: #f8f8f8!important;
+  background-color: transparent;
 }
 
 .highlight div:first-child {
@@ -22,11 +45,12 @@ pre code.hljs {
   border-top-right-radius: unset;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: unset;
-  overflow-x: scroll;
+  overflow: hidden;
 }
 
 .highlight td:last-child pre, .highlight pre {
   border-radius: unset;
+  overflow-x: scroll;
 }
 
 .highlight td:last-child pre code, .highlight pre code {

@@ -31,6 +31,7 @@ body {
 p {
   line-height: 1.5;
   margin: 6px 0;
+  line-break: anywhere;
 }
 p + p {
     margin: 24px 0 6px 0;
@@ -51,6 +52,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 a {
   color: #008AFF;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 @media (prefers-color-scheme: dark) {
   a {

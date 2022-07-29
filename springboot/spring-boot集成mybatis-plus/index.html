@@ -11,7 +11,8 @@
   <meta name="description" content="官方文档
 
 https://mybatis.plus/guide/
-"><script type="application/ld+json">
+">
+  <meta name="author" content="莫奈子"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -61,10 +62,10 @@ https://mybatis.plus/guide/
   "headline": "spring-boot集成mybatis-plus",
   "description" : "官方文档\nhttps:\/\/mybatis.plus\/guide\/ ",
   "inLanguage" : "en",
-  "wordCount":  229 ,
+  "wordCount":  201 ,
   "datePublished" : "2021-09-10T10:02:00",
   "dateModified" : "2021-09-10T10:02:00",
-  "image" : "https:\/\/lypzzz.github.io\/",
+  "image" : "https:\/\/lypzzz.github.io\/img\/avatar.jpg",
   "keywords" : [ "spring-boot, mybatis, mybatis-plus" ],
   "mainEntityOfPage" : "https:\/\/lypzzz.github.io\/springboot\/spring-boot%E9%9B%86%E6%88%90mybatis-plus\/",
   "publisher" : {
@@ -72,7 +73,7 @@ https://mybatis.plus/guide/
     "name" : "https:\/\/lypzzz.github.io\/",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/lypzzz.github.io\/",
+        "url" : "https:\/\/lypzzz.github.io\/img\/avatar.jpg",
         "height" :  60 ,
         "width" :  60
     }
@@ -85,6 +86,7 @@ https://mybatis.plus/guide/
 
 https://mybatis.plus/guide/
 ">
+<meta property="og:image" content="https://lypzzz.github.io/img/avatar.jpg" />
 <meta property="og:url" content="https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis-plus/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="莫奈子博客" />
@@ -94,12 +96,15 @@ https://mybatis.plus/guide/
 
 https://mybatis.plus/guide/
 ">
+  <meta name="twitter:image" content="https://lypzzz.github.io/img/avatar.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://lypzzz.github.io/img/avatar.jpg' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.101.0" />
   <link rel="alternate" href="https://lypzzz.github.io/index.xml" type="application/rss+xml" title="莫奈子博客"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lypzzz.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lypzzz.github.io/css/syntax.css" /><link rel="stylesheet" href="https://lypzzz.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://lypzzz.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://lypzzz.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
   </head>
@@ -137,31 +142,21 @@ https://mybatis.plus/guide/
             </li>
           
         
-          
-            <li>
-              <a title="关于" href="/about/">关于</a>
-            </li>
-          
-        
 
-        
-          
-            <li>
-              
-                
-              
-                
-                  <a href="/zh" lang="zh">zh</a>
-                
-              
-            </li>
-          
         
 
         
       </ul>
     </div>
 
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="莫奈子博客" href="https://lypzzz.github.io/">
+            <img class="avatar-img" src="https://lypzzz.github.io/img/avatar.jpg" alt="莫奈子博客" />
+          </a>
+        </div>
+      </div>
     
 
   </div>
@@ -264,188 +259,85 @@ https://mybatis.plus/guide/
 <li><a href="https://mybatis.plus/guide/">https://mybatis.plus/guide/</a></li>
 </ul>
 <p><strong>添加maven依赖</strong></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-0"> 0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-1"> 1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-2"> 2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-3"> 3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-4"> 4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-5"> 5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-6"> 6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-7"> 7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-8"> 8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-9"> 9</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-10">10</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>com.baomidou<span style="color:#000">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span style="color:#000">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;version&gt;</span>3.4.0<span style="color:#000">&lt;/version&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependency&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>mysql<span style="color:#000">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#000">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;scope&gt;</span>runtime<span style="color:#000">&lt;/scope&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependency&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>配置</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="nt">&lt;version&gt;</span>3.4.0<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="nt">&lt;groupId&gt;</span>mysql<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>mysql-connector-java<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p><strong>配置</strong></p>
 <p>配置数据源相关信息</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-0">0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-4">4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-5">5</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#000">spring</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#000">datasource</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#000">username</span>: <span style="color:#1c01ce">root</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">password</span>: <span style="color:#1c01ce">root</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">driver-class-name</span>: <span style="color:#1c01ce">com.mysql.cj.jdbc.Driver</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">url</span>: <span style="color:#1c01ce">jdbc:mysql://localhost:3306/test</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>使用</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">spring</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">  </span><span class="nt">datasource</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">    </span><span class="nt">driver-class-name</span><span class="p">:</span><span class="w"> </span><span class="l">com.mysql.cj.jdbc.Driver</span><span class="w">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">jdbc:mysql://localhost:3306/test</span><span class="w">
+</span></span></span></code></pre></div><p><strong>使用</strong></p>
 <p>数据表如下</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-0"> 0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-1"> 1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-2"> 2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-3"> 3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-4"> 4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-5"> 5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-6"> 6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-7"> 7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-8"> 8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-9"> 9</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-10">10</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-11">11</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-12">12</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-13"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-13">13</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-14"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-14">14</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-15"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-15">15</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-16"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-16">16</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-17"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-17">17</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-18"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-18">18</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#a90d91">DROP</span> <span style="color:#a90d91">TABLE</span> <span style="color:#a90d91">IF</span> <span style="color:#a90d91">EXISTS</span> <span style="color:#a90d91">user</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">CREATE</span> <span style="color:#a90d91">TABLE</span> <span style="color:#a90d91">user</span>
-</span></span><span style="display:flex;"><span>(
-</span></span><span style="display:flex;"><span>    <span style="color:#000">id</span> <span style="color:#a90d91">BIGINT</span>(<span style="color:#1c01ce">20</span>) <span style="color:#a90d91">NOT</span> <span style="color:#a90d91">NULL</span> <span style="color:#a90d91">COMMENT</span> <span style="color:#c41a16">&#39;主键ID&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#000">name</span> <span style="color:#a90d91">VARCHAR</span>(<span style="color:#1c01ce">30</span>) <span style="color:#a90d91">NULL</span> <span style="color:#a90d91">DEFAULT</span> <span style="color:#a90d91">NULL</span> <span style="color:#a90d91">COMMENT</span> <span style="color:#c41a16">&#39;姓名&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#000">age</span> <span style="color:#a90d91">INT</span>(<span style="color:#1c01ce">11</span>) <span style="color:#a90d91">NULL</span> <span style="color:#a90d91">DEFAULT</span> <span style="color:#a90d91">NULL</span> <span style="color:#a90d91">COMMENT</span> <span style="color:#c41a16">&#39;年龄&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#000">email</span> <span style="color:#a90d91">VARCHAR</span>(<span style="color:#1c01ce">50</span>) <span style="color:#a90d91">NULL</span> <span style="color:#a90d91">DEFAULT</span> <span style="color:#a90d91">NULL</span> <span style="color:#a90d91">COMMENT</span> <span style="color:#c41a16">&#39;邮箱&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">PRIMARY</span> <span style="color:#a90d91">KEY</span> (<span style="color:#000">id</span>)
-</span></span><span style="display:flex;"><span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">DELETE</span> <span style="color:#a90d91">FROM</span> <span style="color:#a90d91">user</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">INSERT</span> <span style="color:#a90d91">INTO</span> <span style="color:#a90d91">user</span> (<span style="color:#000">id</span>, <span style="color:#000">name</span>, <span style="color:#000">age</span>, <span style="color:#000">email</span>) <span style="color:#a90d91">VALUES</span>
-</span></span><span style="display:flex;"><span>(<span style="color:#1c01ce">1</span>, <span style="color:#c41a16">&#39;Jone&#39;</span>, <span style="color:#1c01ce">18</span>, <span style="color:#c41a16">&#39;test1@baomidou.com&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#1c01ce">2</span>, <span style="color:#c41a16">&#39;Jack&#39;</span>, <span style="color:#1c01ce">20</span>, <span style="color:#c41a16">&#39;test2@baomidou.com&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#1c01ce">3</span>, <span style="color:#c41a16">&#39;Tom&#39;</span>, <span style="color:#1c01ce">28</span>, <span style="color:#c41a16">&#39;test3@baomidou.com&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#1c01ce">4</span>, <span style="color:#c41a16">&#39;Sandy&#39;</span>, <span style="color:#1c01ce">21</span>, <span style="color:#c41a16">&#39;test4@baomidou.com&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#1c01ce">5</span>, <span style="color:#c41a16">&#39;Billie&#39;</span>, <span style="color:#1c01ce">24</span>, <span style="color:#c41a16">&#39;test5@baomidou.com&#39;</span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>1.定义实体类</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="k">user</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">user</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="w"></span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">COMMENT</span><span class="w"> </span><span class="s1">&#39;主键ID&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">COMMENT</span><span class="w"> </span><span class="s1">&#39;姓名&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">COMMENT</span><span class="w"> </span><span class="s1">&#39;年龄&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">COMMENT</span><span class="w"> </span><span class="s1">&#39;邮箱&#39;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="w"></span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="w"></span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">user</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="w"></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w">
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="w"></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Jone&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;test1@baomidou.com&#39;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="w"></span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Jack&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;test2@baomidou.com&#39;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="w"></span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Tom&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;test3@baomidou.com&#39;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="w"></span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sandy&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;test4@baomidou.com&#39;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="w"></span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Billie&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;test5@baomidou.com&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>1.定义实体类</p>
 <p><em>com.lyp.entity.User</em></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-0">0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-4">4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-5">5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-6">6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-7">7</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">@Data</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">User</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#000">Long</span> <span style="color:#000">id</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#000">String</span> <span style="color:#000">name</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#000">Integer</span> <span style="color:#000">age</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#000">String</span> <span style="color:#000">email</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>2.定义mapper接口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="nd">@Data</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">email</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>2.定义mapper接口</p>
 <p>与jpa类似，mybatis提供了默认的CRUD功能，对于简单的单表查询，无需配置mapper映射文件(或者基于注解的sql)。</p>
 <p><em>com.lyp.mapper.UserMapper</em></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-0">0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-4">4</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">@Mapper</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">interface</span> <span style="color:#3f6e75">UserMapper</span> <span style="color:#a90d91">extends</span> <span style="color:#000">BaseMapper</span><span style="color:#000">&lt;</span><span style="color:#000">User</span><span style="color:#000">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>3.执行CRUD</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="nd">@Mapper</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>3.执行CRUD</p>
 <p><em>com.lyp.controller.MyController</em></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-0"> 0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-1"> 1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-2"> 2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-3"> 3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-4"> 4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-5"> 5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-6"> 6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-7"> 7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-8"> 8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-9"> 9</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-10">10</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-11">11</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-12">12</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-13"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-13">13</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-14"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-14">14</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-15"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-15">15</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-16"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-16">16</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-17"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-17">17</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">@RestController</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyController</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">private</span> <span style="color:#a90d91">final</span> <span style="color:#000">UserMapper</span> <span style="color:#000">userMapper</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">@Autowired</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">public</span> <span style="color:#000">MyController</span><span style="color:#000">(</span><span style="color:#000">UserMapper</span> <span style="color:#000">userMapper</span><span style="color:#000">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a90d91">this</span><span style="color:#000">.</span><span style="color:#836c28">userMapper</span> <span style="color:#000">=</span> <span style="color:#000">userMapper</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">@GetMapping</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;/users&#34;</span><span style="color:#000">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">public</span> <span style="color:#000">Object</span> <span style="color:#000">users</span><span style="color:#000">()</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">List</span><span style="color:#000">&lt;</span><span style="color:#000">User</span><span style="color:#000">&gt;</span> <span style="color:#000">users</span> <span style="color:#000">=</span> <span style="color:#000">userMapper</span><span style="color:#000">.</span><span style="color:#836c28">selectList</span><span style="color:#000">(</span><span style="color:#a90d91">null</span><span style="color:#000">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a90d91">return</span> <span style="color:#000">users</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nd">@RestController</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyController</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="kd">private</span> <span class="kd">final</span> <span class="n">UserMapper</span> <span class="n">userMapper</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="nd">@Autowired</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="kd">public</span> <span class="nf">MyController</span><span class="o">(</span><span class="n">UserMapper</span> <span class="n">userMapper</span><span class="o">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="o">{</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">userMapper</span> <span class="o">=</span> <span class="n">userMapper</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">&#34;/users&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">users</span><span class="o">()</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="o">{</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">        <span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="n">users</span> <span class="o">=</span> <span class="n">userMapper</span><span class="o">.</span><span class="na">selectList</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">        <span class="k">return</span> <span class="n">users</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div>
 
         
           <div class="blog-tags">
@@ -460,7 +352,81 @@ https://mybatis.plus/guide/
         
 
         
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
 
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E9%259B%2586%25E6%2588%2590mybatis-plus%2f&amp;text=spring-boot%e9%9b%86%e6%88%90mybatis-plus&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E9%259B%2586%25E6%2588%2590mybatis-plus%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E9%259B%2586%25E6%2588%2590mybatis-plus%2f&amp;title=spring-boot%e9%9b%86%e6%88%90mybatis-plus" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E9%259B%2586%25E6%2588%2590mybatis-plus%2f&amp;title=spring-boot%e9%9b%86%e6%88%90mybatis-plus" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E9%259B%2586%25E6%2588%2590mybatis-plus%2f&amp;title=spring-boot%e9%9b%86%e6%88%90mybatis-plus" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E9%259B%2586%25E6%2588%2590mybatis-plus%2f&amp;description=spring-boot%e9%9b%86%e6%88%90mybatis-plus" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/springboot/spring-boot%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/">spring-boot入门案例</a></li>
+                
+                    <li><a href="/springboot/spring-boot%E6%8B%A6%E6%88%AA%E5%99%A8/">spring-boot拦截器</a></li>
+                
+                    <li><a href="/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/">spring-boot集成Mybatis</a></li>
+                
+              </ul>
+
+          
         
       </article>
 
@@ -469,13 +435,16 @@ https://mybatis.plus/guide/
           
           
             <li class="next">
-              <a href="https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/" data-toggle="tooltip" data-placement="top" title="spring-boot集成Mybatis">Next Post &rarr;</a>
+              <a href="https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/" data-toggle="tooltip" data-placement="top" title="spring-boot集成Mybatis">Next &rarr;</a>
             </li>
           
         </ul>
       
 
 
+      
+        
+        
       
 
     </div>
@@ -489,9 +458,38 @@ https://mybatis.plus/guide/
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
+              <li>
+                <a href="mailto:809021823@qq.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/lypzzz" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
           
         </ul>
         <p class="credits copyright text-muted">
+          
+            
+              莫奈子
+            
           
 
           &nbsp;&bull;&nbsp;&copy;
@@ -517,7 +515,10 @@ https://mybatis.plus/guide/
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="https://lypzzz.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://lypzzz.github.io/js/main.js"></script>
+<script src="https://lypzzz.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lypzzz.github.io/js/load-photoswipe.js"></script>
 
 

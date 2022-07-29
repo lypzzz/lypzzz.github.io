@@ -5,13 +5,15 @@
     <link>https://lypzzz.github.io/tags/spring-boot/</link>
     <description>Recent content in spring-boot on 莫奈子博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en-us</language>
+    <managingEditor>809021823@qq.com (莫奈子)</managingEditor>
+    <webMaster>809021823@qq.com (莫奈子)</webMaster>
     <lastBuildDate>Fri, 10 Sep 2021 10:02:00 +0000</lastBuildDate><atom:link href="https://lypzzz.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>spring-boot入门案例</title>
       <link>https://lypzzz.github.io/springboot/spring-boot%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/</link>
       <pubDate>Sun, 01 Aug 2021 08:32:00 +0000</pubDate>
-      
+      <author>809021823@qq.com (莫奈子)</author>
       <guid>https://lypzzz.github.io/springboot/spring-boot%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/</guid>
       <description>&lt;p&gt;官网教程 &lt;a href=&#34;https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html&#34;&gt;https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
@@ -20,7 +22,7 @@
       <title>spring-boot拦截器</title>
       <link>https://lypzzz.github.io/springboot/spring-boot%E6%8B%A6%E6%88%AA%E5%99%A8/</link>
       <pubDate>Mon, 09 Aug 2021 13:18:00 +0000</pubDate>
-      
+      <author>809021823@qq.com (莫奈子)</author>
       <guid>https://lypzzz.github.io/springboot/spring-boot%E6%8B%A6%E6%88%AA%E5%99%A8/</guid>
       <description>&lt;p&gt;使用拦截器很简单，只有2步：定义拦截器；在 &lt;code&gt;WebMvcConfigurer&lt;/code&gt; 的 &lt;code&gt;addInterceptors()&lt;/code&gt; 方法中注册拦截器。&lt;/p&gt;</description>
     </item>
@@ -29,7 +31,7 @@
       <title>spring-boot集成Mybatis</title>
       <link>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/</link>
       <pubDate>Thu, 09 Sep 2021 17:22:00 +0000</pubDate>
-      
+      <author>809021823@qq.com (莫奈子)</author>
       <guid>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/</guid>
       <description>&lt;p&gt;官方文档 &lt;a href=&#34;http://mybatis.org/spring-boot-starter/&#34;&gt;http://mybatis.org/spring-boot-starter/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
@@ -38,7 +40,7 @@
       <title>spring-boot集成mybatis-plus</title>
       <link>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis-plus/</link>
       <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
-      
+      <author>809021823@qq.com (莫奈子)</author>
       <guid>https://lypzzz.github.io/springboot/spring-boot%E9%9B%86%E6%88%90mybatis-plus/</guid>
       <description>&lt;p&gt;官方文档&lt;/p&gt;
 &lt;ul&gt;

@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>spring-boot入门案例 - 莫奈子博客</title>
-  <meta name="description" content="官网教程 https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html"><script type="application/ld+json">
+  <meta name="description" content="官网教程 https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html">
+  <meta name="author" content="莫奈子"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -58,10 +59,10 @@
   "headline": "spring-boot入门案例",
   "description" : "官网教程 https:\/\/docs.spring.io\/spring-boot\/docs\/current\/reference\/html\/getting-started.html\n",
   "inLanguage" : "en",
-  "wordCount":  270 ,
+  "wordCount":  230 ,
   "datePublished" : "2021-08-01T08:32:00",
   "dateModified" : "2021-08-01T08:32:00",
-  "image" : "https:\/\/lypzzz.github.io\/",
+  "image" : "https:\/\/lypzzz.github.io\/img\/avatar.jpg",
   "keywords" : [ "spring-boot" ],
   "mainEntityOfPage" : "https:\/\/lypzzz.github.io\/springboot\/spring-boot%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B\/",
   "publisher" : {
@@ -69,7 +70,7 @@
     "name" : "https:\/\/lypzzz.github.io\/",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/lypzzz.github.io\/",
+        "url" : "https:\/\/lypzzz.github.io\/img\/avatar.jpg",
         "height" :  60 ,
         "width" :  60
     }
@@ -79,18 +80,22 @@
 
 <meta property="og:title" content="spring-boot入门案例" />
 <meta property="og:description" content="官网教程 https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html">
+<meta property="og:image" content="https://lypzzz.github.io/img/avatar.jpg" />
 <meta property="og:url" content="https://lypzzz.github.io/springboot/spring-boot%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="莫奈子博客" />
 
   <meta name="twitter:title" content="spring-boot入门案例" />
   <meta name="twitter:description" content="官网教程 https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html">
+  <meta name="twitter:image" content="https://lypzzz.github.io/img/avatar.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://lypzzz.github.io/img/avatar.jpg' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.101.0" />
   <link rel="alternate" href="https://lypzzz.github.io/index.xml" type="application/rss+xml" title="莫奈子博客"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lypzzz.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lypzzz.github.io/css/syntax.css" /><link rel="stylesheet" href="https://lypzzz.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://lypzzz.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://lypzzz.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
   </head>
@@ -128,31 +133,21 @@
             </li>
           
         
-          
-            <li>
-              <a title="关于" href="/about/">关于</a>
-            </li>
-          
-        
 
-        
-          
-            <li>
-              
-                
-              
-                
-                  <a href="/zh" lang="zh">zh</a>
-                
-              
-            </li>
-          
         
 
         
       </ul>
     </div>
 
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="莫奈子博客" href="https://lypzzz.github.io/">
+            <img class="avatar-img" src="https://lypzzz.github.io/img/avatar.jpg" alt="莫奈子博客" />
+          </a>
+        </div>
+      </div>
     
 
   </div>
@@ -261,231 +256,110 @@
 <p>这里使用maven，手动创建springboot项目</p>
 <p>1.使用idea创建maven项目</p>
 <p>2.在 <em>pom.xml</em> 中，声明 <code>spring-boot-starter-paren</code> 父工程，添加 <code>spring-boot-starter-web</code> 依赖</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-0"> 0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-1"> 1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-2"> 2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-3"> 3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-4"> 4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-5"> 5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-6"> 6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-7"> 7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-8"> 8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-9"> 9</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-10">10</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-11">11</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-12">12</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-13">13</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-14">14</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-0-15">15</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000">&lt;parent&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#000">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#000">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;version&gt;</span>2.5.2<span style="color:#000">&lt;/version&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/parent&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;properties&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;java.version&gt;</span>1.8<span style="color:#000">&lt;/java.version&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/properties&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;dependencies&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#000">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#000">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;/dependency&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependencies&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>3.创建springboot引导程序类</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nt">&lt;parent&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="nt">&lt;version&gt;</span>2.5.2<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="nt">&lt;/parent&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nt">&lt;properties&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nt">&lt;/properties&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="nt">&lt;dependencies&gt;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">        <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">        <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="nt">&lt;/dependencies&gt;</span>
+</span></span></code></pre></div><p>3.创建springboot引导程序类</p>
 <p><em>App.java</em></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-0"> 0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-1"> 1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-2"> 2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-3"> 3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-4"> 4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-5"> 5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-6"> 6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-7"> 7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-8"> 8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-9"> 9</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-1-10">10</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.boot.SpringApplication</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.boot.autoconfigure.SpringBootApplication</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">@SpringBootApplication</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">App</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">public</span> <span style="color:#a90d91">static</span> <span style="color:#a90d91">void</span> <span style="color:#000">main</span><span style="color:#000">(</span><span style="color:#000">String</span><span style="color:#000">[]</span> <span style="color:#000">args</span><span style="color:#000">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">SpringApplication</span><span style="color:#000">.</span><span style="color:#836c28">run</span><span style="color:#000">(</span><span style="color:#000">App</span><span style="color:#000">.</span><span style="color:#836c28">class</span><span style="color:#000">,</span><span style="color:#000">args</span><span style="color:#000">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nd">@SpringBootApplication</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="o">{</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="n">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">App</span><span class="o">.</span><span class="na">class</span><span class="o">,</span><span class="n">args</span><span class="o">);</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><blockquote>
 <p><code>@SpringBootApplication</code> 注解组合了 <code>@SpringBootConfiguration</code>，<code>@EnableAutoConfiguration</code>，<code>@ComponentScan</code> 3个注解。</p>
 </blockquote>
 <p>4.编写控制器代码</p>
 <p><em>HelloController.java</em></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-0"> 0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-1"> 1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-2"> 2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-3"> 3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-4"> 4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-5"> 5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-6"> 6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-7"> 7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-8"> 8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-9"> 9</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-10">10</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-11">11</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-2-12">12</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.web.bind.annotation.GetMapping</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.web.bind.annotation.RequestParam</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.web.bind.annotation.RestController</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">@RestController</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">HelloController</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">@GetMapping</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;/hello&#34;</span><span style="color:#000">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">public</span> <span style="color:#000">String</span> <span style="color:#000">hello</span><span style="color:#000">(</span><span style="color:#000">@RequestParam</span><span style="color:#000">(</span><span style="color:#000">value</span> <span style="color:#000">=</span> <span style="color:#c41a16">&#34;name&#34;</span><span style="color:#000">,</span><span style="color:#000">defaultValue</span> <span style="color:#000">=</span> <span style="color:#c41a16">&#34;world&#34;</span><span style="color:#000">)</span><span style="color:#000">String</span> <span style="color:#000">name</span><span style="color:#000">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a90d91">return</span> <span style="color:#000">String</span><span style="color:#000">.</span><span style="color:#836c28">format</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;hello,%s!&#34;</span><span style="color:#000">,</span><span style="color:#000">name</span><span style="color:#000">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>5.启动springboot应用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestParam</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="nd">@RestController</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">&#34;/hello&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="kd">public</span> <span class="n">String</span> <span class="nf">hello</span><span class="o">(</span><span class="nd">@RequestParam</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&#34;name&#34;</span><span class="o">,</span><span class="n">defaultValue</span> <span class="o">=</span> <span class="s">&#34;world&#34;</span><span class="o">)</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="o">{</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;hello,%s!&#34;</span><span class="o">,</span><span class="n">name</span><span class="o">);</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>5.启动springboot应用</p>
 <p><code>mvn spring-boot:run</code></p>
 <p>访问 http://localhost:8080/hello?name=feet</p>
 <p>ok！应用启动成功，springboot就是这么简单！</p>
 <p>6.单元测试</p>
 <p>在 <em>pom.xml</em> 中添加 <code>spring-boot-starter-test</code> 依赖</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-0">0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-3-4">4</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#000">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#000">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;scope&gt;</span>test<span style="color:#000">&lt;/scope&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/dependency&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然后，编写测试代码 <em>HelloControllerTest.java</em></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-0"> 0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-1"> 1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-2"> 2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-3"> 3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-4"> 4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-5"> 5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-6"> 6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-7"> 7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-8"> 8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-9"> 9</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-10">10</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-11"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-11">11</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-12"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-12">12</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-13"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-13">13</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-14"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-14">14</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-15"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-15">15</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-16"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-16">16</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-17"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-17">17</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-18"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-18">18</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-19"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-19">19</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-20"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-20">20</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-21"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-21">21</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-22"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-22">22</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-23"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-23">23</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-24"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-24">24</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-25"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-25">25</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-26"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-26">26</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-27"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-27">27</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-28"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-28">28</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-29"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-4-29">29</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a90d91">package</span> <span style="color:#000">com.lyp</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import static</span> <span style="color:#000">org.hamcrest.Matchers.equalTo</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import static</span> <span style="color:#000">org.springframework.test.web.servlet.result.MockMvcResultMatchers.content</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import static</span> <span style="color:#000">org.springframework.test.web.servlet.result.MockMvcResultMatchers.status</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.junit.jupiter.api.Test</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.beans.factory.annotation.Autowired</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.boot.test.context.SpringBootTest</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.http.MediaType</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.test.web.servlet.MockMvc</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">org.springframework.test.web.servlet.request.MockMvcRequestBuilders</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">@SpringBootTest</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">@AutoConfigureMockMvc</span>
-</span></span><span style="display:flex;"><span><span style="color:#a90d91">public</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">HelloControllerTest</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">@Autowired</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">private</span> <span style="color:#000">MockMvc</span> <span style="color:#000">mockMvc</span><span style="color:#000">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">@Test</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">public</span> <span style="color:#a90d91">void</span> <span style="color:#000">helloTest</span><span style="color:#000">()</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#a90d91">throws</span> <span style="color:#000">Exception</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">mockMvc</span><span style="color:#000">.</span><span style="color:#836c28">perform</span><span style="color:#000">(</span><span style="color:#000">MockMvcRequestBuilders</span><span style="color:#000">.</span><span style="color:#836c28">get</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;/hello?name=feet&#34;</span><span style="color:#000">).</span><span style="color:#836c28">accept</span><span style="color:#000">(</span><span style="color:#000">MediaType</span><span style="color:#000">.</span><span style="color:#836c28">APPLICATION_JSON</span><span style="color:#000">))</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">.</span><span style="color:#836c28">andExpect</span><span style="color:#000">(</span><span style="color:#000">status</span><span style="color:#000">().</span><span style="color:#836c28">isOk</span><span style="color:#000">())</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">.</span><span style="color:#836c28">andExpect</span><span style="color:#000">(</span><span style="color:#000">content</span><span style="color:#000">().</span><span style="color:#836c28">string</span><span style="color:#000">(</span><span style="color:#000">equalTo</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;hello,feet!&#34;</span><span style="color:#000">)));</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>运行测试用例</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>然后，编写测试代码 <em>HelloControllerTest.java</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kn">package</span> <span class="nn">com.lyp</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="kn">import static</span> <span class="nn">org.hamcrest.Matchers.equalTo</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kn">import static</span> <span class="nn">org.springframework.test.web.servlet.result.MockMvcResultMatchers.content</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="kn">import static</span> <span class="nn">org.springframework.test.web.servlet.result.MockMvcResultMatchers.status</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.http.MediaType</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.test.web.servlet.MockMvc</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="kn">import</span> <span class="nn">org.springframework.test.web.servlet.request.MockMvcRequestBuilders</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="nd">@SpringBootTest</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="nd">@AutoConfigureMockMvc</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloControllerTest</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">  <span class="nd">@Autowired</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">  <span class="kd">private</span> <span class="n">MockMvc</span> <span class="n">mockMvc</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">
+</span></span><span class="line"><span class="ln">22</span><span class="cl">  <span class="nd">@Test</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">helloTest</span><span class="o">()</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">      <span class="kd">throws</span> <span class="n">Exception</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">  <span class="o">{</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">    <span class="n">mockMvc</span><span class="o">.</span><span class="na">perform</span><span class="o">(</span><span class="n">MockMvcRequestBuilders</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&#34;/hello?name=feet&#34;</span><span class="o">).</span><span class="na">accept</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">))</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">        <span class="o">.</span><span class="na">andExpect</span><span class="o">(</span><span class="n">status</span><span class="o">().</span><span class="na">isOk</span><span class="o">())</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">        <span class="o">.</span><span class="na">andExpect</span><span class="o">(</span><span class="n">content</span><span class="o">().</span><span class="na">string</span><span class="o">(</span><span class="n">equalTo</span><span class="o">(</span><span class="s">&#34;hello,feet!&#34;</span><span class="o">)));</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>运行测试用例</p>
 <p><code>mvn clean test</code></p>
 <p>7.构建可执行的jar文件</p>
 <p>设置maven打包方式为jar(默认)，并添加maven构建插件</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-0"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-0">0</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-4">4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-5">5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-6">6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-7">7</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-8">8</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9"><a style="outline: none; text-decoration:none; color:inherit" href="#hl-5-9">9</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#000">&lt;packaging&gt;</span>jar<span style="color:#000">&lt;/packaging&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;build&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;plugins&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;plugin&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#000">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#000">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#000">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span style="color:#000">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#000">&lt;/plugin&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">&lt;/plugins&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">&lt;/build&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>运行maven命令</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nt">&lt;build&gt;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="nt">&lt;plugins&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">        <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">            <span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">        <span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="nt">&lt;/plugins&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nt">&lt;/build&gt;</span>
+</span></span></code></pre></div><p>运行maven命令</p>
 <p><code>mvn clean package</code></p>
 <p>跳过测试</p>
 <p><code>mvn clean package -DskipTests</code></p>
@@ -504,7 +378,81 @@
         
 
         
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
 
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E5%2585%25A5%25E9%2597%25A8%25E6%25A1%2588%25E4%25BE%258B%2f&amp;text=spring-boot%e5%85%a5%e9%97%a8%e6%a1%88%e4%be%8b&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E5%2585%25A5%25E9%2597%25A8%25E6%25A1%2588%25E4%25BE%258B%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E5%2585%25A5%25E9%2597%25A8%25E6%25A1%2588%25E4%25BE%258B%2f&amp;title=spring-boot%e5%85%a5%e9%97%a8%e6%a1%88%e4%be%8b" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E5%2585%25A5%25E9%2597%25A8%25E6%25A1%2588%25E4%25BE%258B%2f&amp;title=spring-boot%e5%85%a5%e9%97%a8%e6%a1%88%e4%be%8b" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E5%2585%25A5%25E9%2597%25A8%25E6%25A1%2588%25E4%25BE%258B%2f&amp;title=spring-boot%e5%85%a5%e9%97%a8%e6%a1%88%e4%be%8b" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2flypzzz.github.io%2fspringboot%2fspring-boot%25E5%2585%25A5%25E9%2597%25A8%25E6%25A1%2588%25E4%25BE%258B%2f&amp;description=spring-boot%e5%85%a5%e9%97%a8%e6%a1%88%e4%be%8b" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/springboot/spring-boot%E6%8B%A6%E6%88%AA%E5%99%A8/">spring-boot拦截器</a></li>
+                
+                    <li><a href="/springboot/spring-boot%E9%9B%86%E6%88%90mybatis/">spring-boot集成Mybatis</a></li>
+                
+                    <li><a href="/springboot/spring-boot%E9%9B%86%E6%88%90mybatis-plus/">spring-boot集成mybatis-plus</a></li>
+                
+              </ul>
+
+          
         
       </article>
 
@@ -512,7 +460,7 @@
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://lypzzz.github.io/springboot/spring-boot%E6%8B%A6%E6%88%AA%E5%99%A8/" data-toggle="tooltip" data-placement="top" title="spring-boot拦截器">&larr; Previous Post</a>
+              <a href="https://lypzzz.github.io/springboot/spring-boot%E6%8B%A6%E6%88%AA%E5%99%A8/" data-toggle="tooltip" data-placement="top" title="spring-boot拦截器">&larr; Previous</a>
             </li>
           
           
@@ -520,6 +468,9 @@
       
 
 
+      
+        
+        
       
 
     </div>
@@ -533,9 +484,38 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
+              <li>
+                <a href="mailto:809021823@qq.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/lypzzz" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
           
         </ul>
         <p class="credits copyright text-muted">
+          
+            
+              莫奈子
+            
           
 
           &nbsp;&bull;&nbsp;&copy;
@@ -561,7 +541,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="https://lypzzz.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://lypzzz.github.io/js/main.js"></script>
+<script src="https://lypzzz.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lypzzz.github.io/js/load-photoswipe.js"></script>
 
 

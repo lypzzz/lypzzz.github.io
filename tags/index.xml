@@ -5,13 +5,15 @@
     <link>https://lypzzz.github.io/tags/</link>
     <description>Recent content in Tags on 莫奈子博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en-us</language>
+    <managingEditor>809021823@qq.com (莫奈子)</managingEditor>
+    <webMaster>809021823@qq.com (莫奈子)</webMaster>
     <lastBuildDate>Fri, 10 Sep 2021 10:02:00 +0000</lastBuildDate><atom:link href="https://lypzzz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mybatis</title>
       <link>https://lypzzz.github.io/tags/mybatis/</link>
       <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
-      
+      <author>809021823@qq.com (莫奈子)</author>
       <guid>https://lypzzz.github.io/tags/mybatis/</guid>
       <description></description>
     </item>
@@ -20,7 +22,7 @@
       <title>mybatis-plus</title>
       <link>https://lypzzz.github.io/tags/mybatis-plus/</link>
       <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
-      
+      <author>809021823@qq.com (莫奈子)</author>
       <guid>https://lypzzz.github.io/tags/mybatis-plus/</guid>
       <description></description>
     </item>
@@ -29,7 +31,7 @@
       <title>spring-boot</title>
       <link>https://lypzzz.github.io/tags/spring-boot/</link>
       <pubDate>Fri, 10 Sep 2021 10:02:00 +0000</pubDate>
-      
+      <author>809021823@qq.com (莫奈子)</author>
       <guid>https://lypzzz.github.io/tags/spring-boot/</guid>
       <description></description>
     </item>
