@@ -26,8 +26,6 @@ pre code.hljs {
 
 .highlight td:last-child {
   border: none;
-  width: 100%;
-  overflow-x: scroll;
   background-color: transparent;
 }
 
@@ -50,7 +48,7 @@ pre code.hljs {
 
 .highlight td:last-child pre, .highlight pre {
   border-radius: unset;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .highlight td:last-child pre code, .highlight pre code {
