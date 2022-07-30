@@ -578,6 +578,7 @@ footer .theme-by {
   -moz-transition: opacity 1s linear;
   transition: opacity 1s linear;
 }
+.intro-header .heading,
 .intro-header .page-heading,
 .intro-header .tags-heading,
 .intro-header .categories-heading {
